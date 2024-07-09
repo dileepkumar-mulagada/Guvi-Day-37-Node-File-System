@@ -9,6 +9,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     try {
+        res.send("Files Created")
         const today = new Date().toISOString().replace(/:/g, '-')
         const filePath = path.join('TimeStamp', `${today}.txt`);
 
